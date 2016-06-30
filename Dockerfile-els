@@ -1,2 +1,4 @@
 FROM elasticsearch:2
 ADD config/*.yml /usr/share/elasticsearch/config/
+RUN gosu elasticsearch /usr/share/elasticsearch/bin/plugin install license
+RUN gosu elasticsearch /usr/share/elasticsearch/bin/plugin install marvel-agent
