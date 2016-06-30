@@ -1,6 +1,6 @@
 version: '2'
 services:
-  elasticsearch:
+  els1:
     build:
       context: ./
       dockerfile: Dockerfile-els
@@ -11,7 +11,20 @@ services:
     - ./data:/usr/share/elasticsearch/data
     networks:
       - mynet
-    container_name: elasticsearch
+    container_name: els1
+    hostname: els1
+    command: elasticsearch -Des.discovery.zen.ping.unicast.hosts=els1
+  els2:
+    build:
+      context: ./
+      dockerfile: Dockerfile-els
+    volumes:
+      - ./data:/usr/share/elasticsearch/data
+    networks:
+      - mynet
+    container_name: els2
+    hostname: els2
+    command: elasticsearch -Des.discovery.zen.ping.unicast.hosts=els1
   kibana:
     build:
       context: ./
@@ -20,6 +33,9 @@ services:
       - "5601:5601"
     networks:
       - mynet
+    environment:
+      ELASTICSEARCH_URL: http://els1:9200
     container_name: kibana
+    hostname: Kibana
 networks:
   mynet:
