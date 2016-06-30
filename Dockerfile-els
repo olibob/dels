@@ -1,0 +1,2 @@
+FROM elasticsearch:2
+ADD config/*.yml /usr/share/elasticsearch/config/
