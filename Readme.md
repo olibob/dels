@@ -11,4 +11,4 @@ Replace `localhost` with your HyperV VM IP or mapped host name on Windows.
 
 When using the sense plugin: the elasticsearch server is located at http://elasticsearch:9200.
 
-![alt text][https://raw.githubusercontent.com/olibob/dels/master/docs/sense.png]
+![alt text](https://raw.githubusercontent.com/olibob/dels/master/docs/sense.png)
