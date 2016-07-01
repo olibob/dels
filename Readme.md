@@ -8,6 +8,11 @@ This has been tested on Docker for Mac  1.12.0-rc2.
 
 The cluster has 2 nodes: els1 (master) and els2.
 
+### Configuration
+
+Configuration for the elasticsearch nodes are located in `config-els1` and `config-els2` folders
+els1 is forced as master.
+
 ## Access URLs
 
 Both kibana and elasticsearch run on standard ports. Replace `localhost` with your VM IP or mapped host name if needed.
@@ -33,7 +38,3 @@ When using the sense plugin: the elasticsearch server is located at http://els1:
 A demo of Marvel is valid for 30 days to give it a run. It can be accessed from within kibana or directly at http://localhost:5601/app/marvel.
 
 Give it a shot to check shards allocation, replication, metrics, ...
-
-## TODO
-
-- elasticsearch config to be moved into the docker compose file and out of the Dockerfile
