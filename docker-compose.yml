@@ -13,7 +13,6 @@ services:
       - mynet
     container_name: els1
     hostname: els1
-    command: elasticsearch -Des.discovery.zen.ping.unicast.hosts=els1
   els2:
     build:
       context: ./
@@ -24,7 +23,6 @@ services:
       - mynet
     container_name: els2
     hostname: els2
-    command: elasticsearch -Des.discovery.zen.ping.unicast.hosts=els1
   kibana:
     build:
       context: ./

@@ -1,10 +1,17 @@
+############################## Network And HTTP ###############################
 network:
   host: 0.0.0.0
 
+################################### Cluster ###################################
 cluster:
   name: "ap"
 
+#################################### Node #####################################
 node:
   name: ${HOSTNAME}
   master: false
   data: true
+
+################################## Discovery ##################################
+discovery.zen.ping.multicast.enabled: false
+discovery.zen.ping.unicast.hosts: els1
