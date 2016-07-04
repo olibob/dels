@@ -38,3 +38,12 @@ When using the sense plugin: the elasticsearch server is located at http://els1:
 A demo of Marvel is valid for 30 days to give it a run. It can be accessed from within kibana or directly at http://localhost:5601/app/marvel.
 
 Give it a shot to check shards allocation, replication, metrics, ...
+
+## Usage
+
+`cd` into the base directory and ...
+
+```
+docker network create mynet
+docker-compose up
+```
